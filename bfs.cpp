@@ -16,7 +16,7 @@ int s = ...;
 
 int main()
 {
-	const int INF = sz(g) + 228;
+	const int INF = N + 228;
 	static int d[N];
 	fill(d, d + N, INF);
 	d[s] = 0;
