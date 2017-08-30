@@ -30,7 +30,7 @@ int dfs(int v, int minw){
 			if(flow > 0){
 				c[e] -= flow;
 				c[e^1] += flow;
-				return flow;
+				return flow; // just 1 path?
 			}
 		}
 	}
@@ -41,7 +41,7 @@ int dinic(){
 	int ans = 0;
 	while(bfs(s, t) != -1){
 		memset(d, 0, sizeof(d));
-		int flow = dfs(0);
+		int flow = dfs(0); // just 1 dfs?
 		if(flow > 0) ans += flow;
 		else break;
 	}
